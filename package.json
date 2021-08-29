@@ -9,6 +9,9 @@
     "dev": "nodemon --config nodemon.json src/app.js",
     "test": "jest"
   },
+  "engines": {
+    "node": "14.15.5"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
