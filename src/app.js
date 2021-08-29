@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-app.set('port', config.server.port);
+app.set('port', process.env.PORT);
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
