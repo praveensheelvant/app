@@ -3,14 +3,14 @@
 	"info": {
 		"name": "postman_collection",
 		"_postman_id": "1881351a-03cb-b6f9-523a-072868ce8b7a",
-		"description": "App",
+		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Get Records",
 			"request": {
-				"url": "http://localhost:4545/api/getrecords",
+				"url": "https://postps-app.herokuapp.com/api/getrecords",
 				"method": "POST",
 				"header": [
 					{
@@ -21,7 +21,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"startDate\": \"2017-01-26\",\r\n\t\"endDate\": \"2018-02-02\",\r\n\t\"minCount\": 2700,\r\n\t\"maxCount\": 3000\r\n}"
+					"raw": "{\r\n\t\"startDate\": \"2017-01-26\",\r\n\t\"endDate\": \"2018-02-02\",\r\n\t\"minCount\": 2500,\r\n\t\"maxCount\": 3000\r\n}"
 				},
 				"description": ""
 			},
@@ -30,7 +30,7 @@
 		{
 			"name": "Create Records",
 			"request": {
-				"url": "http://localhost:4545/api/records",
+				"url": "https://postps-app.herokuapp.com/api/records",
 				"method": "POST",
 				"header": [
 					{
