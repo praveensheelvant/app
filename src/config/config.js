@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
-const SERVER_PORT = process.env.SERVER_PORT;
+const SERVER_PORT = process.env.SERVER_PORT || 4545;
 
 const MONGO_USERNAME = process.env.MONGO_USERNAME || 'praveen';
 const MONGO_PASSWORD = process.env.MONGO_USERNAME || 'PzHXpbnNJDt1wWjj';
