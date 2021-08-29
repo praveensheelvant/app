@@ -14,4 +14,5 @@ app.listen(app.get('port'), config.server.hostname, () => {
     log.info(`Server listening at http://${config.server.hostname}:${app.get('port')}`);
     connect(config.mongo.uri, config.mongo.options);
     routes(app);
-});
+}); 
+
