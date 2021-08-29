@@ -2,7 +2,7 @@
 
 By default app will run http://localhost:4545
 
-App healtcheck get end point http://localhost:4545/healtcheck shoul respnse "ok"
+App healtcheck get end point http://localhost:4545/healtcheck should respnse "ok"
 
 Document create post endpoint http://localhost:4545/api/records 
 with payload 
