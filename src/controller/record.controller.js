@@ -14,7 +14,7 @@ let creatRecordHandler = async function (req, res) {
 let getRecordsHandler= async function (req, res) {
     try {
         const record =  await getRecords(req.body);
-        console.log(record);
+        // console.log(record);
         return res.send(record);
     } catch (err) {
         log.error(err);

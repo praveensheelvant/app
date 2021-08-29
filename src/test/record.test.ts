@@ -1,5 +1,6 @@
 const { MongoClient } = require("mongodb");
 
+
 describe("insert and expect record", () => {
   let connection;
   let db;
@@ -25,4 +26,5 @@ describe("insert and expect record", () => {
     const insertedUser = await records.findOne({ _id: "some-id" });
     expect(insertedUser).toEqual(mockRecord);
   });
+
 });

@@ -1,0 +1,56 @@
+{
+	"variables": [],
+	"info": {
+		"name": "postman_collection",
+		"_postman_id": "1881351a-03cb-b6f9-523a-072868ce8b7a",
+		"description": "App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Records",
+			"request": {
+				"url": "http://localhost:4545/api/getrecords",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"startDate\": \"2017-01-26\",\r\n\t\"endDate\": \"2018-02-02\",\r\n\t\"minCount\": 2700,\r\n\t\"maxCount\": 3000\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Records",
+			"request": {
+				"url": "http://localhost:4545/api/records",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-refresh",
+						"value": "{{refreshToken}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  \t{\r\n\t\t\"key\": \"TAKwGc6Jr4i8Z487\",\r\n\t\t\"totalCount\": 2800,\r\n\t\t\"createdAt\": \"2017-01-28T01:22:14.398Z\",\r\n\t\t\"updatedAt\": \"2017-01-28T01:22:14.398Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"NAeQ8eX7e5TEg7oH\",\r\n\t\t\"totalCount\": 2900,\r\n\t\t\"createdAt\": \"2017-01-27T08:19:14.135Z\",\r\n\t\t\"updatedAt\": \"2017-01-27T08:19:14.135Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"GHKwGcy7r4i8Z4th\",\r\n\t\t\"totalCount\": 2850,\r\n\t\t\"createdAt\": \"2018-01-28T01:22:14.398Z\",\r\n\t\t\"updatedAt\": \"2018-01-28T01:22:14.398Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"ABeQ8eX7e5TEg7yg\",\r\n\t\t\"totalCount\": 2950,\r\n\t\t\"createdAt\": \"2019-01-27T08:19:14.135Z\",\r\n\t\t\"updatedAt\": \"2019-01-27T08:19:14.135Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"ABCwGcy7r4i8ZXYZ\",\r\n\t\t\"totalCount\": 2650,\r\n\t\t\"createdAt\": \"2020-01-28T01:22:14.398Z\",\r\n\t\t\"updatedAt\": \"2020-01-28T01:22:14.398Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"ABeQ8eX7e5TEg7yg\",\r\n\t\t\"totalCount\": 2980,\r\n\t\t\"createdAt\": \"2021-01-27T08:19:14.135Z\",\r\n\t\t\"updatedAt\": \"2021-01-27T08:19:14.135Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"HTCwGcy7r4i8Zhhj\",\r\n\t\t\"totalCount\": 2830,\r\n\t\t\"createdAt\": \"2017-01-22T01:22:14.398Z\",\r\n\t\t\"updatedAt\": \"2017-01-22T01:22:14.398Z\"\r\n\t},\r\n\t{\r\n\t\t\"key\": \"ghseQ8eX7e5TEgpoil\",\r\n\t\t\"totalCount\": 2999,\r\n\t\t\"createdAt\": \"2021-01-21T08:19:14.135Z\",\r\n\t\t\"updatedAt\": \"2021-01-21T08:19:14.135Z\"\r\n\t}\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

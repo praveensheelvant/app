@@ -2,3 +2,5 @@ node_modules
 .vs_code
 coverage
 dist
+.env
+globalConfig.json
