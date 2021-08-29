@@ -5,9 +5,9 @@
 const SERVER_HOSTNAME = process.env.SERVER_HOSTNAME || 'localhost';
 const SERVER_PORT = process.env.PORT || 4545;
 
-const MONGO_USERNAME = process.env.MONGO_USERNAME || 'praveen';
-const MONGO_PASSWORD = process.env.MONGO_USERNAME || 'PzHXpbnNJDt1wWjj';
-const MONGO_HOST = process.env.MONGO_URL || `cluster0.p033h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const MONGO_USERNAME = process.env.MONGO_USERNAME || 'challengeUser';
+const MONGO_PASSWORD = process.env.MONGO_USERNAME || 'WUMglwNBaydH8Yvu';
+const MONGO_HOST = process.env.MONGO_URL || `challenge-xzwqd.mongodb.net/getircase-study?retryWrites=true`;
 
 const SERVER = {
     hostname: SERVER_HOSTNAME,
