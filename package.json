@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "bower install && grunt build",
     "serve": "node src/app.js",
     "start": "npm run serve",
     "dev": "nodemon --config nodemon.json src/app.js",
