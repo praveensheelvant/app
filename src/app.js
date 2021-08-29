@@ -3,6 +3,8 @@ const config = require('./config/config');
 const routes = require('./routes')
 const log = require('./logger/index');
 const connect = require('./db/connecnt');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
 
