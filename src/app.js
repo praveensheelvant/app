@@ -7,19 +7,30 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 process
-  .on('SIGTERM', shutdown('SIGTERM'))
-  .on('SIGINT', shutdown('SIGINT'))
-  .on('uncaughtException', shutdown('uncaughtException'));
+    .on('SIGTERM', shutdown('SIGTERM'))
+    .on('SIGINT', shutdown('SIGINT'))
+    .on('uncaughtException', shutdown('uncaughtException'));
+
+function shutdown(signal) {
+    return (err) => {
+        console.log(`${signal}...`);
+        if (err) console.error(err.stack || err);
+        setTimeout(() => {
+            console.log('...waited 5s, exiting.');
+            process.exit(err ? 1 : 0);
+        }, 5000).unref();
+    };
+}
 
 const app = express();
 
 app.set('port', config.server.port);
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 app.listen(app.get('port'), config.server.hostname, () => {
     log.info(`Server listening at http://${config.server.hostname}:${app.get('port')}`);
     connect(config.mongo.uri, config.mongo.options);
     routes(app);
-}); 
+});
 
