@@ -6,6 +6,11 @@ const connect = require('./db/connecnt');
 const dotenv = require('dotenv');
 dotenv.config();
 
+process
+  .on('SIGTERM', shutdown('SIGTERM'))
+  .on('SIGINT', shutdown('SIGINT'))
+  .on('uncaughtException', shutdown('uncaughtException'));
+
 const app = express();
 
 app.set('port', config.server.port);
